@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bdsjqyi1ntng6"]
+
+[ext_resource type="Script" path="res://Item/Plants/Plant.cs" id="1_o4x44"]
+
+[node name="Pine Tree" type="Node2D"]
+script = ExtResource("1_o4x44")

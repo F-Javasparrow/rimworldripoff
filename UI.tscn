@@ -1,0 +1,115 @@
+[gd_scene load_steps=5 format=3 uid="uid://dfra5xhejl5yh"]
+
+[ext_resource type="Script" path="res://scripts/UI.cs" id="1_a2apc"]
+[ext_resource type="Script" path="res://pnl_bottom.gd" id="2_b6jvm"]
+[ext_resource type="Script" path="res://pnl_architect.gd" id="3_nkekw"]
+[ext_resource type="Script" path="res://pnl_selected_item.gd" id="4_qqta4"]
+
+[node name="UI" type="CanvasLayer"]
+script = ExtResource("1_a2apc")
+
+[node name="pnl_bottom" type="Panel" parent="."]
+anchors_preset = -1
+anchor_top = 0.95
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource("2_b6jvm")
+
+[node name="btn_architect" type="Button" parent="pnl_bottom"]
+layout_mode = 0
+anchor_right = 0.25
+anchor_bottom = 1.0
+text = "Architect"
+
+[node name="btn_work" type="Button" parent="pnl_bottom"]
+layout_mode = 0
+anchor_left = 0.25
+anchor_right = 0.5
+anchor_bottom = 1.0
+text = "Work"
+
+[node name="btn_schedule" type="Button" parent="pnl_bottom"]
+layout_mode = 0
+anchor_left = 0.5
+anchor_right = 0.75
+anchor_bottom = 1.0
+text = "Schedule"
+
+[node name="btn_assign" type="Button" parent="pnl_bottom"]
+layout_mode = 0
+anchor_left = 0.75
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "Assign"
+
+[node name="Architect" type="Panel" parent="."]
+visible = false
+anchors_preset = -1
+anchor_top = 0.85
+anchor_right = 0.2
+anchor_bottom = 0.95
+script = ExtResource("3_nkekw")
+reset = false
+
+[node name="btn_orders" type="Button" parent="Architect"]
+layout_mode = 0
+anchor_right = 0.5
+anchor_bottom = 0.5
+text = "Orders"
+
+[node name="btn_zone" type="Button" parent="Architect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+text = "Zone"
+
+[node name="btn_structure" type="Button" parent="Architect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+text = "Structure"
+
+[node name="btn_production" type="Button" parent="Architect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "Production"
+
+[node name="pnl_buildable" type="Panel" parent="Architect"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = -1.0
+anchor_right = 4.991
+anchor_bottom = 1.0
+
+[node name="pnl_selected_item" type="Panel" parent="."]
+anchors_preset = -1
+anchor_top = 0.8
+anchor_right = 0.2
+anchor_bottom = 0.95
+script = ExtResource("4_qqta4")
+
+[node name="lbl_item_name" type="Label" parent="pnl_selected_item"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 92.0
+offset_bottom = 28.0
+text = "Item Name"
+
+[node name="lbl_item_amount" type="Label" parent="pnl_selected_item"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 38.0
+offset_right = 92.0
+offset_bottom = 61.0
+text = "48"

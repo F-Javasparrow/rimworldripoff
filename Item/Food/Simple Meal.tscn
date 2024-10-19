@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://buxe1k8yeaaok"]
+
+[ext_resource type="Script" path="res://Item/Food/Food.cs" id="1_lwyno"]
+
+[node name="Simple Meal" type="Node2D"]
+script = ExtResource("1_lwyno")
